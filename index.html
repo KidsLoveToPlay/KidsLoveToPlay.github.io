@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Button</title>
+  <style>
+  </style>
+</head>
+<body>
+<div class="container">
+  <h0 class="date">Maeva on sors ensembles le 18 ?</h0>
+
+  <a href="about.html"><button class="boutonoui" id="button" onclick="">oui</button></a>
+  <button class="boutonnon" id="randomButton" onclick="moveButton()">Non</button>
+
+  <img class="chatcon" src="chat.gif" alt="">
+</div>
+
+<script>
+  function moveButton() {
+    var button = document.getElementById('randomButton');
+
+    // Calculate random position
+    var randomTop = Math.floor(Math.random() * window.innerHeight);
+    var randomLeft = Math.floor(Math.random() * window.innerWidth);
+
+    // Set new position
+    button.style.top = randomTop + 'px';
+    button.style.left = randomLeft + 'px';
+  }
+</script>
+
+</body>
+</html>
